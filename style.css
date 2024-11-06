@@ -72,6 +72,8 @@ header{
    background: var(--hover-color);
    border-radius: 0.2rem;
    transition: 0.2s all linear;
+   border-bottom: 5px solid var(--bg-color);
+   width: 20%;
 }
 
 .menu img {
@@ -160,8 +162,8 @@ header{
    object-position:center;
    padding:0px;
    background:transparent;
-   border-radius: 0.5rem;
-   border: 2px solid var(--text-color);
+   border-radius: 0rem;
+   border-bottom: 10px solid var(--text-color);
    
    
 }
@@ -187,7 +189,7 @@ header{
    transition: 6s;
 }
 .home .home-box img:hover{
-   content: url(img/n7.jpg);
+   content: url(img/b3.jpg);
    transition: 3s;
 }
 /* .home .home-box .box h3{
@@ -279,7 +281,7 @@ header{
    text-align: center;
    background: var(--bg-color);
    border: 0.1rem solid rgb(121, 160, 121);
-   border-radius: 0.5rem;
+   border-radius: 2rem  2rem 0 0 ;
 }
 .about .about-container img {
    width: 70px;
@@ -322,11 +324,11 @@ header{
 .services .services-container .box{
    padding: 0rem;
    color: var(--main-color);
-   border: 5px solid var(--hover-color);
+   border: 2px solid var(--hover-color);
 
    text-transform: uppercase;
    background: #dad7d4;
-   border-radius: 0.2rem;
+   border-radius: 1rem 1rem 0 0;
 }
 .services .services-container .box:hover{
    background: white;
@@ -363,13 +365,14 @@ header{
    align-content: center;
    object-fit: cover;
    text-align: center;
-   border-radius: 0.5rem;
+   border-radius: 1rem 1rem 0 0;
    padding-right: 0.2rem;
    border: 2px solid var(--bg-color);
+
    
 }
 .services .services-container .box img:hover{
-   background: url(img/n4.jpg);
+   
    color: #fff;
    transition: 0.2s all linear;
    content: url(img/nn4.jpg) ;
@@ -439,6 +442,13 @@ header{
     object-fit: cover;
     
 }
+/* .customer-container .box img:hover {
+   width: 100%;
+   height: 180px;
+   border: 0.5%;
+   object-fit: cover;
+   
+} */
 .box .stars  img {
     width: 10%;
     height: 1.5rem;
@@ -561,14 +571,17 @@ header{
    display: list-item;
    width: 65%;
    height: 1.8rem;
-   margin-bottom: 1rem
-   
+   margin-bottom: 1rem;
+   border: transparent;
+   border-radius: 0 1rem 1rem 0;
 }
 .container .box label{
    color: rgb(30, 78, 30);
    padding-bottom: 2rem;
    gap: 2rem;
    margin-bottom: 2rem;
+   border: transparent;
+   display: none;
 }
 .container .box p{
    color: var(--hover-color);
@@ -578,6 +591,8 @@ header{
    display: list-item;
    width: 65%;
    height: 1.8rem;
+   border: transparent;
+   border-radius: 0 1rem 1rem 0;
 }
 
 
@@ -612,18 +627,32 @@ header{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
    gap: 1.5rem;
-   background: var(--text-color);
+   background: white;
+ text-align: center;
+   justify-content: center;
+   align-content: center;
+   align-items: center;   
+}
+.footer-box{
+  
    
 }
 .footer-box h3 {
-   font-size: 1.2rem;
+   font-size: 1.1rem;
+   text-transform: uppercase;
    font-weight:600 ;
    margin-bottom: 10px;
-   color: khaki;
+   color: rgb(18, 34, 18);
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .footer-box p{
    color: var(--main-color);
    text-transform: uppercase;
+   border: 3px solid rgb(18, 34, 18) ;
+   width: 70%;
+   padding: 0.6rem;
+   font-size: 0.7rem;
+   margin-left: 15%;
 
 
 }
@@ -635,14 +664,22 @@ header{
    color: var(--main-color);
    text-transform: uppercase;  
 }
-
-.footer-box .social img {
+.footer .social2 img{
    width: 4rem;
    height: 2.5rem;
    color: white;
    object-fit: contain;
    border-radius: 0.5rem;
-   background-color: antiquewhite;
+   margin-left: -4%;
+   margin-top: -1.5rem;
+}
+.footer .footer-box .social img {
+   width: 4rem;
+   height: 2.5rem;
+   color: white;
+   object-fit: contain;
+   border-radius: 0.5rem;
+ 
 }
 .footer-box .social img:hover {
    color: var(--bg-color);
