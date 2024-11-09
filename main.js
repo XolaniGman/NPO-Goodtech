@@ -8,11 +8,7 @@ window.onscroll = () => {
      navbar.classList.remove('active');
 }
 
-const applyBtn =document.querySelector(".applyBtn");
-const appycontainer =document.querySelector(".appycontainer");
-applyBtn.addEventListener("click",() =>{
-     appycontainer.classList.toggle("active")
-})
+
 
 ///upload///
 const dropArea = document.querySelector(".drop_box"),
@@ -32,10 +28,38 @@ let filedata =
 <div class="form">
 <h4>${fileName}</h4>
 <input type="email" placeholder="Enter email upload file">
-<button class="btn">Upload</button>
+<button href="https://outlook.live.com/mail/0/" class="btn">Upload</button>
 </div>
 </form>
 `
 ;
 dropArea.innerHTML = filedata;
 });
+     
+
+const wrapper = document.querySelector(".wrapper"),
+header = wrapper.querySelector("header");
+
+function onDrag({movementX, movementY}){
+  let getStyle = window.getComputedStyle(wrapper);
+  let leftVal = parseInt(getStyle.left);
+  let topVal = parseInt(getStyle.top);
+  wrapper.style.left = `${leftVal + movementX}px`;
+  wrapper.style.top = `${topVal + movementY}px`;
+}
+
+header.addEventListener("mousedown", ()=>{
+  header.classList.add("active");
+  header.addEventListener("mousemove", onDrag);
+});
+
+document.addEventListener("mouseup", ()=>{
+  header.classList.remove("active");
+  header.removeEventListener("mousemove", onDrag);
+});
+
+const apply =document.querySelector(".apply");
+//  const navbar =document.querySelector(".navbar");
+apply.addEventListener("click",() =>{
+    wrapper.classList.toggle("active")
+ })
