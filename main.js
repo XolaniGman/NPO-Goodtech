@@ -63,3 +63,21 @@ const apply =document.querySelector(".apply");
 apply.addEventListener("click",() =>{
     wrapper.classList.toggle("active")
  })
+ 
+const vid = document.querySelector('#vid');
+const pipBtn = document.querySelector('#pip-btn');
+
+// On click of button, enter PIP mode
+pipBtn.addEventListener('click', () => {
+  vid.requestPictureInPicture();
+});
+
+vid.addEventListener('enterpictureinpicture', () => {
+  pipBtn.textContent = 'Vid is now PIP';
+  pipBtn.disabled = true;
+});
+
+vid.addEventListener('leavepictureinpicture', () => {
+  pipBtn.textContent = 'Enter PIP';
+  pipBtn.disabled = false;
+});
